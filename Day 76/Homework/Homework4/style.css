@@ -1,0 +1,33 @@
+/* // 4) გავაკეთოთ css-ის შემდეგი ანიმაციები ღილაკებზე: როდესაც მაუსი გადაუვლის გავადიდოთ ოდნავ ზემოთ ავწით,  როდესაც დავაკლიკებთ ფერი შეეცვალოს და დაშორება ასოებს შორის. */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.animated-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    transition: transform 0.3s ease, background-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.animated-button:hover {
+    transform: scale(1.1) translateY(-5px); 
+}
+
+.animated-button:active {
+    background-color: #2ecc71;
+    letter-spacing: 2px; 
+}

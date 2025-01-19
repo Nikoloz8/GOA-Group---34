@@ -1,0 +1,48 @@
+/* 3) შევქმნათ 3 ღილაკი, თითოეულ ღილაკზე ჰოვერის დროს, უნდა გამოვიდეს დივი ნომერით 1, ნომერი 2 და ნომერი 3 შესაბამისად. ( ეს დივები უნდა გაჩნდეს ნელა ) */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    margin-left: 150px;
+}
+
+.container:hover .hidden {
+    opacity: 1;
+}

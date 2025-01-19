@@ -1,0 +1,39 @@
+<!-- 2) თქვენი ფანტაზიით შექმენით ანიამცია JavaScript-ით, აიღეთ რამდენიმე ღილაკი რომელთა დაჭერისასაც შეიცვლება სურათის წყარო, გამოიყენეთ inline JavaScript -->
+
+<!-- 3) გამოიკვილეთ document-ი, შეამოწმეთ button,p,img ელემენტების კუთვნილებები და შეუცვალეთ თითოეულს 5-ი, interal JavaScript-ის გამოყენებით  -- --- -- ??????? -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="iamge" src="./download (1).jpg" alt="">
+
+    <button onclick="iamge.src='./download (2).jpg'">Image1</button>
+    <button onclick="iamge.src='./download (3).jpg'">Image2</button>
+    <button onclick="iamge.src='./download.jpg'">Image3</button>
+    <button onclick="iamge.src='./EnhanceAfter.jpg'">Image4</button>
+    <button onclick="iamge.src='./images.jpg'">Image5</button>
+    <button onclick="iamge.src='./download (1).jpg'">Image0</button>
+
+    <button id="test">TEST</button>
+
+    <img id="testimage" src="" alt="">
+
+
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis laudantium quis eum, vitae animi deserunt totam necessitatibus expedita nemo non voluptates ipsam dolorum consequuntur cum perspiciatis! Maiores, ut illo?</p>
+    
+    <script>
+        let test = document.getElementById("testimage").src = "./download (3).jpg";
+        let paragraph = document.getElementById("paragraph").innerText = "lorem ipsum"; 
+        let button = document.getElementById("test").style = "width: 300px; height:40px; background-color: red; color: white; font-size: 20px; font-family: monospace; font-weight: bold; border-radius: 20px; border: none; cursor: pointer;";
+    </script>
+</body>
+
+</html>
