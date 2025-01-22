@@ -13,6 +13,7 @@ let top1 = 0
 setInterval(function () {
     Cube.style.left = left + "px"
     Cube.style.top = top1 + "px"
+    
     if (left < 1500 && top1 == 0) {
         left += 3
     }
