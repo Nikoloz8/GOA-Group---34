@@ -1,0 +1,52 @@
+<!-- 3) შექმენით ღილაკი რომელიც ქმნის ქაუნთერის პროგრამას ( 3 დაკლიკებაზე უნდა გამოვიდეს 3 სხვადასხვა ქაუნთერის პროგრამა თავისი ღილაკებით ტექსტით ასე შემდეგ ), ამ თითოეულ პროგრამას დაამატეთ 'დალოქვის' ფუნქცია რომელიც მომხმარებელს აუკრძალავს მაგ კონკრეტულ ქაუნთერზე ნებისმიერი ოპერაციის მოხდენას ( ჩექბოქსი ), ასევე დაამათეთ ანდუ და რედუ ( 1 დამახსოვრება ), (თითო ქაუნთერზე სხვადასხვა ) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #counter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .counter {
+            border: 1px solid black;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="add-counter">Add Counter</button>
+    <div id="counter-container"></div>
+    <script src="./script.js">
+    </script>

@@ -1,0 +1,36 @@
+<!-- 3) შექმენით იგივე ანიმაცი ოღონდ ღილაკზე ჰოვერის დროს  --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Button</title>
+    <style>
+        .color-changing-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        .color-changing-button:hover {
+            background-color: red;
+            animation: changeColors 5s infinite alternate;
+        }
+
+        @keyframes changeColors {
+            0% { background-color: red; }
+            25% { background-color: orange; }
+            50% { background-color: yellow; }
+            75% { background-color: green; }
+            100% { background-color: blue; }
+        }
+    </style>
+</head>
+<body>
+    <button class="color-changing-button">Hover over me!</button>
+</body>
+</html>
+

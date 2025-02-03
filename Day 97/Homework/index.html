@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>ელ.ფოსტების ფილტრაცია</h2>
+        <label for="filter">აირჩიეთ თემა:</label>
+        <select id="filter">
+            <option value="">ყველა</option>
+            <option value="მოგზაურობა">მოგზაურობა</option>
+            <option value="მოხსენება">მოხსენება</option>
+            <option value="გაცნობიერება">გაცნობიერება</option>
+        </select>
+        <ul id="emailList"></ul>
+    </div>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

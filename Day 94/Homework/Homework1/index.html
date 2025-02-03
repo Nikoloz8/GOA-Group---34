@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            height: 100vh;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .huge,
+        .small,
+        .big {
+            background-color: rgb(255, 111, 135);
+        }
+
+        .big{
+            width: 50%;
+            height: 100%;
+        }
+
+        .small{
+            width: 50%;
+            height: 100%;
+        }
+
+        .huge {
+            width: 100%;
+            height: 40%;
+        }
+
+        .small-divs,
+        .big-divs {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .big-divs{
+            height: 40%;
+        }
+
+        .small-divs{
+            height: 20%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .small-divs{
+                display: flex;
+                flex-wrap: wrap;
+                height: 40%;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .small{
+                width: 48%;
+                height: 50%;
+            }
+
+            .big-divs{
+                gap: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            div{
+                width: 100%;
+                height: 300px;  
+            }
+
+            .small-divs{
+                width: 100%;
+                height: 100%;
+            }
+
+            .small{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="huge"></div>
+    <div class="small-divs">
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+    </div>
+    <div class="big-divs">
+        <div class="big"></div>
+        <div class="big"></div>
+    </div>
+
+</body>
+
+</html>

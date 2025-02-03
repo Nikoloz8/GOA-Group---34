@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: gray;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .huge{
+            height: 33%;
+            background-color: white;
+            border: 5px solid cyan;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .small1, .small4{
+            width: 75%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: white;
+            border: 5px solid cyan;
+
+        }
+
+        .small2, .small3{
+            width: 25%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: white;
+            border: 5px solid cyan;
+        }
+
+        .small1-divs, .small2-divs{
+            height: 33%;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .small1, .small2, .huge{
+                height: 220px;
+                width: 100%;
+            }
+
+            .small1-divs{
+                flex-direction: column;
+                height: 440px;
+            }
+            
+            .small3, .small4{
+                width: 50%;
+                height: 220px;
+            }
+
+            .small2-divs{
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="huge"></div>
+    <div class="small1-divs">
+        <div class="small1"></div>
+        <div class="small2"></div>
+    </div>
+    <div class="small2-divs">
+        <div class="small3"></div>
+        <div class="small4"></div>
+    </div>
+</body>
+</html>

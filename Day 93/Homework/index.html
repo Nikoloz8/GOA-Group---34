@@ -1,0 +1,146 @@
+<!-- DAY 93
+დავალება: "ქუქი-კლიკერი" სურთად სამი გაჯეტი
+დავალების მიზანი:
+
+შექმენით "ქუქი-კლიკერის" ტიპის თამაში, სადაც მოთამაშეს აქვს ქულები (ქუქიები) და ოქრო (Gold). თითოეული ქუქი-კლიკი ქულას (ქუქის) მატებს და მოთამაშეს შეუძლია სხვადასხვა გაჯეტის შეძენა, რომლებიც თამაშის პროგრესს აჩქარებს.
+
+ძირითადი იდეა:
+ქულები (ქუქიები):
+ქუქის სურათზე ყოველი კლიკით მოთამაშე იღებს 1 ქულას.
+ქულები გამოიყენება თამაშის ძირითად პროგრესში და თამაშის მიზანია მათი დაგროვება.
+ყოველი კლიკი ოქროს მატებს, რომლის რაოდენობაც დამოკიდებულია გაჯეტებზე.
+ოქრო გამოიყენება მხოლოდ გაჯეტების შესაძენად.
+სამი გაჯეტი:
+თითოეულ გაჯეტს აქვს უნიკალური ფუნქცია, რომელიც აუმჯობესებს მოთამაშის ქულების და ოქროს შემოსავალს.
+გაჯეტების აღწერა:
+"დიდი თითი" (Bigger Finger)
+
+როგორ მუშაობს:
+ყოველ შეძენაზე "დიდი თითი" ზრდის თითოეული კლიკის ქულებს (ქუქიებს) +1-ით.
+მაგალითად, თუ თავდაპირველად მოთამაშე იღებს 1 ქულას კლიკზე, "დიდი თითის" პირველი შეძენის შემდეგ მიიღებს 2 ქულას კლიკზე. მეორე შეძენაზე 3 ქულას და ასე შემდეგ.
+შესაძლებლობა:
+"დიდი თითის" განახლება შესაძლებელია უსასრულოდ, მაგრამ მისი ფასი ყოველ ჯერზე იზრდება.
+პირველ შეძენაზე: 50 ოქრო.
+მეორე შეძენაზე: 100 ოქრო.
+მესამე შეძენაზე: 200 ოქრო და ა.შ.
+ფორმულა: ფასი = წინა ფასი × 2.
+"საუკეთესო მაღაროები" (Better Mines)
+
+როგორ მუშაობს:
+"საუკეთესო მაღაროები" ზრდის თითოეული კლიკისას მიღებული ოქროს რაოდენობას +1-ით.
+მაგალითად, თუ მოთამაშე თავდაპირველად იღებს 1 ოქროს კლიკზე, გაჯეტის შეძენის შემდეგ იღებს 2 ოქროს კლიკზე, შემდეგ 3 ოქროს და ა.შ.
+შესაძლებლობა:
+"საუკეთესო მაღაროები" ასევე განახლებადია უსასრულოდ, ხოლო ფასი იზრდება.
+პირველ შეძენაზე: 100 ქულა.
+მეორე შეძენაზე: 200 ქულა.
+მესამე შეძენაზე: 400 ქულა და ა.შ.
+ფორმულა: ფასი = წინა ფასი × 2.
+"ორმაგი ქულები" (Double Cookies)
+
+როგორ მუშაობს:
+"ორმაგი ქულები" გაჯეტი ორმაგად ზრდის მოთამშის ამ გაჯეტის გამოყენების მომენტში მიღებულ ქულებს.
+მაგალითად, თუ მოთამაშე იღებდა 2 ქულას კლიკზე, გაჯეტის შეძენის შემდეგ მიიღებს 4 ქულას, შემდეგ 8 ქულას და ა.შ.
+შესაძლებლობა:
+"ორმაგი ქულებ   ი" განახლებადია, თუმცა მისი ფასი ყოველ შეძენაზე ორმაგდება.
+პირველ შეძენაზე: 200 ოქრო.
+მეორე შეძენაზე: 400 ოქრო.
+მესამე შეძენაზე: 800 ოქრო და ა.შ.
+ფორმულა: ფასი = წინა ფასი × 2.     თუ რაიმე გამომრჩა ან არ დამიკონკრეტებია შეგიძლიათ მომწეროთ. წარმატებები❤️ ( დავალება შეასრულეთ ჯავასკრიპტით. გასტილული )  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: blueviolet;
+        }
+
+        .main {
+            width: 800px;
+            height: 450px;
+            border: 3px solid black;
+            border-radius: 32px;
+            background-color: cyan;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main img {
+            width: 250px;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 230px;
+            height: 40px;
+            border-radius: 16px;
+            border: none;
+            outline: none;
+            background-color: gray;
+            font-family: cursive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .buttons-container {
+            gap: 30px;
+            display: flex;
+        }
+
+        .p-container {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .cookie {
+            margin-left: 50px;
+            margin-right: 20px;
+        }
+
+        .gold {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="p-container">
+            <p class="gold">Gold: <span id="gold-counter">0</span></p>
+            <p class="cookie">Cookie: <span id="cookie-counter">0</span></p>
+        </div>
+        <img src="./image-removebg-preview (1).png" alt="cookie" id="img">
+        <div class="buttons-container">
+            <button id="bigger">Bigger Finger || Price: 50 Gold</button>
+            <button id="better">Better Mines || Price: 100 Cookies</button>
+            <button id="double">Double Cookies || Price: 200 Gold</button>
+        </div>
+    </div>
+
+    <script src="./script.js">
+        
+    </script>
+</body>
+
+</html>
