@@ -139,4 +139,4 @@ function countEvens(list){
     return counter
 }
 
-console.log(countEvens([1, 4, 2, 1, 8]))
+console.log(countEvens([1, 4, 2, 1, 8]))    
