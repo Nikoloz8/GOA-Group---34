@@ -1,0 +1,115 @@
+<!-- 2) შევქნათ საიტი რომელსაც ეთამაშებით ჯეირანს, და გქონდეთ 'ტაბი' ( ცალკე ჩასაკეცი დივი) რომელიც აჩვენებს თქვენს თამაშებს წითელ და მწვანე ფერებში, ისევე როგორც ინფორმაციას თქვენი თამაშის შესახებ ( მაგ რომელმა მოთამაშემ რა აირჩია ან რა დროს მოხდა თამაში ). 
+🔴 დიზაინი მნიშვნელოვანია 🔴 -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(0, 132, 255);
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px;
+        }
+
+        .img-container {
+            display: flex;
+            width: 800px;
+            justify-content: space-between;
+            margin-bottom: 200px;
+        }
+
+        .img-container img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .scores {
+            display: flex;
+            flex-direction: row;
+            width: 800px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+
+        #game-history {
+            width: 1000px;
+            margin-top: 20px;
+            padding: 40px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .game-entry {
+            margin-bottom: 10px;
+            border: 1px solid black;
+            padding: 50px;
+            width: 100%;
+        }
+
+        .game-entry span {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        #stats-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #001eff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #stats-button:hover {
+            background-color: #3700ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scores">
+        <h1>მოთამაშის ქულები = <p id="player-scores">0</p>
+        </h1>
+        <h1>კომპიუტერის ქულები = <p id="computer-scores">0</p>
+        </h1>
+    </div>
+    <div class="img-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSN8Z21iQulBMICc1BdFMmGbRQnvNiB9-Gew&s"
+            id="scissors">
+        <img src="https://preview.redd.it/69jlov07gpg11.jpg?auto=webp&s=3e141b52bdacf5ef7aeef4f6969bb19da4290571"
+            id="rock">
+        <img src="https://www.wikihow.com/images/7/7f/Frontpage-Step-1.jpg" id="paper">
+    </div>
+
+    <h2 id="result"></h2>
+
+    <div id="game-history">
+        <h3>Game History</h3>
+    </div>
+
+    <button id="stats-button">Toggle Stats</button>
+
+    <script src="./script2.js">
+
+    </script>
+</body>
+
+</html>
