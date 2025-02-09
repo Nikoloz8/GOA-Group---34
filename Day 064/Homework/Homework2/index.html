@@ -1,0 +1,51 @@
+<!-- 3) შექმენით საიტი სადაც იქნება სარეგისტრაციო ფორმა, რომელსაც ექნება სამი შესაყვანი ველი. სახელი ემაილი და პაროლი. ასევე მომხარებელს აარჩევნიეთ თავისი სქესი(გამოიყენეთ radio-ს ტიპის ინფუთები და გადაეცეით მათ ერთნაირი name ატრიბუტი). შექმენით ფუნქცია, რომელიც წამოიღებს ფორმიდან მონაცემებს. შეამოწმეთ პაროლის სიგრძე. თუ ნაკლებია 8 სიმბოლოზე, მომხარებელს გამოუტანეთ ალერტ მესიჯი: Password is to short, სხვა შემთხვევაში შექმენით ობიექტი, რომელსაც გადასცემთ შემოტანილ მნიშვნელობებს, ხოლო ეს ობიექტი უნდა ჩაამატოთ სიაში სახელად dateBase, რომელიც ფუნქციის გარეთ იქნება შექმნილი და მასში ყოველი ახალი ობიექტის დამატების შემდეგ კონსოლში გამოიტანეთ ეს მასივი -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .warning {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Name">
+        <p class="warning" id="nameWarn">Enter your name</p>
+        <input type="email" id="email" placeholder="Email">
+        <p class="warning" id="emailWarn">Enter your email</p>
+        <input type="password" id="password" placeholder="Password">
+        <p class="warning" id="passwordWarn">Enter your password</p>
+        <br>
+        <br>
+        <br>
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <p class="warning" id="genderWarn">Select your gender</p>
+        <br>
+        <br>
+        <br>
+        <button onclick="register()">Submit</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

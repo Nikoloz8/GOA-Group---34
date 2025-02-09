@@ -1,0 +1,48 @@
+<!-- დაასრულეთ საკლასო დავალება, ვისაც არ დაგისრულებიათ:
+
+2) შექმენით საიტი სადაც გექნებათ სარეგისტრაციო ფორმა. მომხარებელს უნდა შემოატანინოთ სახელი, ემაილი, პაროლი და გამოუტანოთ checkbox-ი. ფორმა არ დადასტურდეს იქამდე სანამ მომხარებელი არ მონიშნავს ჩექმბოქსს. შეამოწმეთ არის თუ არა ინფუთები ცარიელი. თუ კი გამოუტანეთ გამაფრთხილებელი მესიჯი და გათიშეთ ფუნქცია, ხოლო თუ მომხარებელმა ყველაფერი სწორად შეიყვანა გამოიტანეთ ინფუთების მნიშვნელობა კონსოლში
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .warning {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Name">
+        <p class="warning" id="nameWarn">Enter your name</p>
+        <input type="email" id="email" placeholder="Email">
+        <p class="warning" id="emailWarn">Enter your email</p>
+        <input type="password" id="password" placeholder="Password">
+        <p class="warning" id="passwordWarn">Enter your password</p>
+        <label>
+            <input type="checkbox" id="agree"> I agree to terms
+        </label>
+        <p class="warning" id="checkWarn">You must agree</p>
+        <button onclick="register()">Submit</button>
+    </div>
+    <script src="./script.js"> </script>
+</body>
+
+</html>
+
+
+<!--
+3) შექმენით საიტი სადაც იქნება სარეგისტრაციო ფორმა, რომელსაც ექნება სამი შესაყვანი ველი. სახელი ემაილი და პაროლი. ასევე მომხარებელს აარჩევნიეთ თავისი სქესი(გამოიყენეთ radio-ს ტიპის ინფუთები და გადაეცეით მათ ერთნაირი name ატრიბუტი). შექმენით ფუნქცია, რომელიც წამოიღებს ფორმიდან მონაცემებს. შეამოწმეთ პაროლის სიგრძე. თუ ნაკლებია 8 სიმბოლოზე, მომხარებელს გამოუტანეთ ალერტ მესიჯი: Password is to short, სხვა შემთხვევაში შექმენით ობიექტი, რომელსაც გადასცემთ შემოტანილ მნიშვნელობებს, ხოლო ეს ობიექტი უნდა ჩაამატოთ სიაში სახელად dateBase, რომელიც ფუნქციის გარეთ იქნება შექმნილი და მასში ყოველი ახალი ობიექტის დამატების შემდეგ კონსოლში გამოიტანეთ ეს მასივი -->
