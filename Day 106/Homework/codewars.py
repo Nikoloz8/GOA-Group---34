@@ -30,6 +30,7 @@ def is_sorted_and_how(arr):
   
  #JS 
   
+  
 # function sort(initialArray, sortingArray) {
 #   for (let i = 0; i < initialArray.length; i++) {
 #     if (sortingArray[i] !== i) {

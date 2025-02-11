@@ -61,6 +61,3 @@ truck.drive()
 john.introduce()
 sarah.introduce()
 mike.introduce()
-
-
-
