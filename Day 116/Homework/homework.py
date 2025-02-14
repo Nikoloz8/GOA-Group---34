@@ -6,4 +6,4 @@ def two_sum(numbers, target):
         for j in range(len(numbers)):
             if numbers[j] + numbers[i] == target:
                 if i != j:
-                    return (i, j)
+                    return (i, j)   
