@@ -5,6 +5,11 @@
 // // შედეგი: true 
 
 function qvenakrebi(set1, set2) {
+
+    if (set1.size > set2.size) {
+        return qvenakrebi(set2, set1)
+    }
+
     for (let elem of set1) {
         if (!set2.has(elem)) {
             return false
@@ -15,8 +20,10 @@ function qvenakrebi(set1, set2) {
 }
 
 
-console.log(qvenakrebi(new Set([1, 2]), new Set([1, 2, 3])))
-console.log(qvenakrebi(new Set([1, 2, 4]), new Set([1, 2, 3])))
+
+
+console.log(qvenakrebi(new Set([1, 2, 3, 4]), new Set([1, 2, 3])))
+console.log(qvenakrebi(new Set([1, 2, 4, 8, 1]), new Set([1, 2, 3])))
 console.log(qvenakrebi(new Set([1, 2, 3]), new Set([1, 2, 3])))
 console.log(qvenakrebi(new Set(), new Set([1, 2, 3])))
 console.log(qvenakrebi(new Set([1, 2, 3]), new Set([1, 2])))
@@ -30,21 +37,21 @@ console.log(qvenakrebi(new Set([1, 2, 3]), new Set([3, 2, 1, 4])))
 // დაწერე ფუნქცია, რომელიც გასაღებებს და მნიშვნელობებს შეცვლის ადგილმონაცვლეობით რუკაში. თუ მნიშვნელობები მეორდება, დაიტოვე ბოლო გასაღები.
 // მაგალითი:
 // ინვერტირებულრუკა(new Map([['a', 1], ['b', 2], ['c', 1]])); 
-// // შედეგი: Map {1 => 'c', 2 => 'b'}
+// შედეგი: Map {1 => 'c', 2 => 'b'}
 
 let test = new Map([['a', 1], ['b', 2], ['c', 1]])
 
 console.log(test)
 
-function change(map){
+function change(map) {
     newMap = new Map()
 
     array = []
 
-    for (let i of map){
+    for (let i of map) {
         array.push(i)
     }
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         newMap.set(array[i][1], array[i][0])
     }
 
@@ -60,28 +67,28 @@ console.log(change(test))
 // მაქსიმალურისგასაღებები(new Map([['a', 5], ['b', 3], ['c', 5]])); 
 // // შედეგი: ['a', 'c']
 
-function maximums(map){
+function maximums(map) {
     newMap = new Map()
 
     array = []
 
-    for (let i of map){
+    for (let i of map) {
         array.push(i)
     }
 
     result = []
-    
-    maximum = array[0][1]
-    for (let i = 0; i < array.length; i++){
 
-        if (array[i][1] > maximum ){
+    maximum = array[0][1]
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i][1] > maximum) {
             maximum = array[i][1]
         }
 
     }
 
-    for (let i = 0; i < array.length; i++){
-        if (array[i][1] === maximum){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i][1] === maximum) {
             result.push(array[i][0])
         }
     }
