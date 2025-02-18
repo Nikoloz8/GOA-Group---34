@@ -4,17 +4,17 @@
 // Task:
 // წერე ფუნქცია, რომელიც იღებს name და callback ფუნქციას. ფუნქცია უნდა დაიდოს setTimeout()-ში, რომ 2 წამში დაბეჭდოს მისასალმებელი მესიჯი.
 
-// function hello(name, callback){
-//     setTimeout(function(){
-//         callback(`Hello, ${name}`)
-//     }, 2000)
-// }
+function hello1(name, callback){
+    setTimeout(function(){
+        callback(`Hello, ${name}`)
+    }, 2000)
+}
 
-// function message(message){
-//     console.log(message)
-// }
+function message1(message){
+    console.log(message)
+}
 
-// hello("Nika", message)
+hello1("Nika", message1)
 
 
 // Callback with Time Delay (Simulate a Process)
